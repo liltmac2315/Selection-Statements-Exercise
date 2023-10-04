@@ -1,4 +1,5 @@
-﻿namespace SelectionStatementExercise
+﻿
+namespace SelectionStatementExercise
 {
     public class Program
     {
@@ -6,39 +7,39 @@
         {
             //Number guessing game.
 
-            //var r = new Random();
-            //var favNumber = r.Next(1, 1000);
-            //int userInput;
-            //var counter = 0;
+            var r = new Random();
+            var favNumber = r.Next(1, 1000);
+            int userInput;
+            var counter = 0;
 
-            //do
-            //{ 
-            //    Console.WriteLine("Pick a number from 1 - 1000");
-            //    userInput = int.Parse(Console.ReadLine());
+            do
+            {
+                Console.WriteLine("Pick a number from 1 - 1000");
+                userInput = int.Parse(Console.ReadLine());
 
-            //    if (userInput < favNumber)
-            //    {
-            //        Console.WriteLine($"(userInput) Is too low");
-            //    }
-            //    else if (userInput > favNumber)
-            //    {
-            //        Console.WriteLine($"(userInput) Is too low");
-            //    }
-            //    else
-            //    {
-            //        Console.WriteLine("You guessed it!");
-            //    }
-            //        counter++;
+                if (userInput < favNumber)
+                {
+                    Console.WriteLine($"{userInput} Is too low");
+                }
+                else if (userInput > favNumber)
+                {
+                    Console.WriteLine($"{userInput} Is too high");
+                }
+                else
+                {
+                    Console.WriteLine("You guessed it!");
+                }
+                counter++;
 
-            //    Console.WriteLine($"You have guessed (counter) times");
+                Console.WriteLine($"You have guessed {counter} times");
 
-            //    } while (userInput != favNumber) ;
+            } while (userInput != favNumber);
 
             // Switch-case section
             Console.WriteLine("What is your favorite subject?");
 
             string subject = Console.ReadLine();
-            switch (subject.ToLower)
+            switch (subject.ToLower())
             {
                 case "math":
                     Console.WriteLine("Ilove math.");
